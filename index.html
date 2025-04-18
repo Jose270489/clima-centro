@@ -48,23 +48,28 @@
   </style>
 </head>
 <body>
-  <a href="https://www.ande.gov.py" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Logo_ANDE.svg/200px-Logo_ANDE.svg.png" alt="Logo ANDE" style="position: absolute; top: 10px; left: 10px; height: 50px;">
+  <a href="https://www.ande.gov.py" target="_blank" style="position: fixed; top: 10px; left: 10px; z-index: 1000;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Logo_ANDE.svg/200px-Logo_ANDE.svg.png" alt="Logo ANDE" style="height: 50px;">
   </a>
   <h1>Clima Zona Centro</h1>
   <div class="dashboard">
-    <!-- Widgets ya integrados (omitidos aquí por brevedad) -->
+    <div class="city-card">
+      <div class="city-header">Coronel Oviedo</div>
+      <div class="widget-container">
+        <a class="weatherwidget-io" href="https://forecast7.com/es/n25d45n56d44/coronel-oviedo/" data-label_1="Coronel Oviedo" data-label_2="Clima" data-theme="original">Coronel Oviedo Clima</a>
+      </div>
+    </div>
+    <!-- más ciudades aquí -->
   </div>
   <script>
-    !(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js, fjs);
+    window.onload = function () {
+      if (!document.getElementById("weatherwidget-io-js")) {
+        var js = document.createElement("script");
+        js.id = "weatherwidget-io-js";
+        js.src = "https://weatherwidget.io/js/widget.min.js";
+        document.body.appendChild(js);
       }
-    })(document, 'script', 'weatherwidget-io-js');
+    };
   </script>
 </body>
 </html>
