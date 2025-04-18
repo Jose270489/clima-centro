@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -43,7 +44,7 @@
     }
     iframe {
       width: 100%;
-      height: 250px;
+      height: 300px;
     }
   </style>
 </head>
@@ -56,20 +57,10 @@
     <div class="city-card">
       <div class="city-header">Coronel Oviedo</div>
       <div class="widget-container">
-        <a class="weatherwidget-io" href="https://forecast7.com/es/n25d45n56d44/coronel-oviedo/" data-label_1="Coronel Oviedo" data-label_2="Clima" data-theme="original">Coronel Oviedo Clima</a>
+        <iframe src="https://forecast7.com/es/n25d45n56d44/coronel-oviedo/" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
-    <!-- más ciudades aquí -->
+    <!-- Puedes copiar más bloques similares para las demás ciudades -->
   </div>
-  <script>
-    window.onload = function () {
-      if (!document.getElementById("weatherwidget-io-js")) {
-        var js = document.createElement("script");
-        js.id = "weatherwidget-io-js";
-        js.src = "https://weatherwidget.io/js/widget.min.js";
-        document.body.appendChild(js);
-      }
-    };
-  </script>
 </body>
 </html>
